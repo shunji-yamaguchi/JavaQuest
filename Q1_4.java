@@ -11,7 +11,7 @@
 
 
 public class Q1_4{
-  public static void main(String[] args){
-    System.out.println("おはよう。\nこんにちは。\nこんばんは。\n");
-  }
-}
+    public static void main(String[] args){
+        System.out.println("おはよう。\r\nこんにちは。\r\nこんばんは。");
+        }
+    }
