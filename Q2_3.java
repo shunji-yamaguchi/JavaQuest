@@ -6,10 +6,11 @@
 
 public class Q2_3 {
     public static void main(String[] args) {
-        int width1 = 2;
-        int width2 = 3;
-        int height = 4;
-        System.out.println("上底が" + width1 + "、下底が" + width2
-                + "、高さが" + height + "の台形の面積は" + (height * (double) (width1 + width2) / 2));
+        double width1 = 2;
+        double width2 = 3;
+        double height = 4;
+        double ans = ((width1 + width2) * height / 2);
+        System.out.println("上底が" + width1 + "メートル、下底が" + width2
+                + "メートル、高さが" + height + "メートルの台形の面積は" + ans + "平方メートルです。");
     }
 }
