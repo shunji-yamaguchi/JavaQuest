@@ -8,9 +8,8 @@
 //  }
 //}
 
-
-public class Q2_4{
-  public static void main(String[] args){
-    System.out.println("10000 * 10000 = " + (long)(10000 * 10000));
-  }
+public class Q2_4 {
+    public static void main(String[] args) {
+        System.out.println("100000 * 100000 = " + ((long) 100000 * 100000));
+    }
 }
