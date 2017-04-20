@@ -9,8 +9,8 @@ public class Q2_3 {
         double width1 = 2;
         double width2 = 3;
         double height = 4;
-        double ans = ((width1 + width2) * height / 2);
-        System.out.println("上底が" + width1 + "メートル、下底が" + width2
-                + "メートル、高さが" + height + "メートルの台形の面積は" + ans + "平方メートルです。");
+        double ans = (width1 + width2) * height / 2;
+        System.out.println("上底が" + width1 + "センチ、下底が" + width2
+                + "センチ、高さが" + height + "センチの台形の面積は" + ans + "平方センチです。");
     }
 }
