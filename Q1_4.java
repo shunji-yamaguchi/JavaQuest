@@ -11,8 +11,8 @@
 
 
 public class Q1_4{
-    public static void main(String[] args){
-        String str = System. getProperty("line.separator");
-        System. out. println("おはよう。" + str + "こんにちは。" + str + "こんばんは。");
+    public static void main( String[] args ){
+        String str = System.getProperty("line.separator");
+        System.out.println("おはよう。" + str + "こんにちは。" + str + "こんばんは。");
         }
     }
