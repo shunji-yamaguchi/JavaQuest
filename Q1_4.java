@@ -12,7 +12,7 @@
 
 public class Q1_4 {
     public static void main(String[] args) {
-        String str = System.lineSeparator();
-        System.out.println("おはよう。" + str + "こんにちは。" + str + "こんばんは。");
+        String line_separotor = System.lineSeparator();
+        System.out.println("おはよう。" + line_separotor + "こんにちは。" + line_separotor + "こんばんは。");
     }
 }
