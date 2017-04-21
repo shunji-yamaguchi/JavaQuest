@@ -1,26 +1,25 @@
-/**
-*2人の名前と年齢を入力すると、その人たちの年齢の平均を表示するプログラムを書いてください。
-*/
+
+//2人の名前と年齢を入力すると、その人たちの年齢の平均を表示するプログラムを書いてください。
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Q3_2 {
+    private static final int MAX_NUMBER_OFPEAPLE = 2;
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         try {
-            double sum = 0;
-            int number = 2;
+            int sum = 0;
 
-            for (int count = 0; count < number; count++) {
+            for (int count = 0; count < MAX_NUMBER_OFPEAPLE; count++) {
                 System.out.println((count + 1) + "人目の名前を入力してください");
                 String name = reader.readLine();
                 System.out.println(name + "さんの年齢を入力してください。");
                 sum += Integer.parseInt(reader.readLine());
             }
-            System.out.println(number + "人の平均年齢は" + (sum / number) + "です。");
+            System.out.println(MAX_NUMBER_OFPEAPLE + "人の平均年齢は" + ((double) sum / MAX_NUMBER_OFPEAPLE) + "です。");
         } catch (IOException e) {
             System.out.println(e);
         } catch (NumberFormatException e) {
