@@ -24,7 +24,6 @@ public class Q4_3 {
             String greet;
             System.out.println("時刻を入力してください。");
             int time_now = Integer.parseInt(reader.readLine());
-            
 
             if (time_now < 0 || 23 < time_now) {
                 greet = "正しい時刻を入力してください";
