@@ -21,20 +21,23 @@ public class Q4_3 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
+            String greet;
             System.out.println("時刻を入力してください。");
             int time_now = Integer.parseInt(reader.readLine());
+            
 
             if (time_now < 0 || 23 < time_now) {
-                System.out.println("正しい時刻を入力してください");
+                greet = "正しい時刻を入力してください";
             } else if (time_now <= 11) {
-                System.out.println("おはようございます");
+                greet = "おはようございます";
             } else if (time_now <= 12) {
-                System.out.println("お昼です");
+                greet = "お昼です";
             } else if (time_now <= 18) {
-                System.out.println("こんにちは");
+                greet = "こんにちは";
             } else {
-                System.out.println("こんばんは");
+                greet = "こんばんは";
             }
+            System.out.println(greet);
         } catch (IOException e) {
             System.out.println(e);
         } catch (NumberFormatException e) {
