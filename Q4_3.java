@@ -25,16 +25,16 @@ public class Q4_3 {
             System.out.println("時刻を入力してください。");
             int time_now = Integer.parseInt(reader.readLine());
 
-            if (time_now < 0 || 23 < time_now) {
-                greet = "正しい時刻を入力してください";
-            } else if (time_now <= 11) {
+            if (time_now <= 0 && time_now <= 11) {
                 greet = "おはようございます";
-            } else if (time_now <= 12) {
+            } else if (time_now == 12) {
                 greet = "お昼です";
-            } else if (time_now <= 18) {
+            } else if (13 <= time_now &&time_now <= 18) {
                 greet = "こんにちは";
-            } else {
+            } else if (19 <= time_now && time_now <= 23) {
                 greet = "こんばんは";
+            } else {
+                greet = "正しい時刻を入力してください";
             }
             System.out.println(greet);
         } catch (IOException e) {
