@@ -14,28 +14,23 @@ public class Q5_6 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            String line_separator = System.lineSeparator();
             String str;
-            System.out.println(
-                    "飲み物は何が好きですか？" + line_separator
-                            + "あ＝オレンジジュース" + line_separator
-                            + "い＝コーヒー" + line_separator
-                            + "う＝どちらでもない" + line_separator
-                            + "あ、い、う、のどれかを選んでください");
+            System.out.println("飲み物は何が好きですか？");
+            System.out.println("あ＝オレンジジュース");
+            System.out.println("い＝コーヒー");
+            System.out.println("う＝どちらでもない");
+            System.out.println("あ、い、う、のどれかを選んでください");
 
             switch (reader.readLine()) {
-            case "あ": {
+            case "あ":
                 str = "オレンジジュースです。";
                 break;
-            }
-            case "い": {
+            case "い":
                 str = "コーヒーです。";
                 break;
-            }
-            default: {
+            default:
                 str = "どちらでもありません。";
                 break;
-            }
             }
 
             System.out.println(str);
