@@ -17,35 +17,29 @@ public class Q5_4 {
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String str;
-            String line_separator = System.lineSeparator();
             int choice = 0;
 
-            System.out.println(
-                    "飲み物は何が好きですか？" + line_separator
-                            + "1 オレンジジュース" + line_separator
-                            + "2 コーヒー" + line_separator
-                            + "3 ミルク" + line_separator
-                            + "4 どれでもない" + line_separator
-                            + "1,2,3,4のどれかを選んでください。");
+            System.out.println("飲み物は何が好きですか？");
+            System.out.println("1 オレンジジュース");
+            System.out.println("2 コーヒー");
+            System.out.println("3 ミルク");
+            System.out.println("4 どれでもない");
+            System.out.println("1,2,3,4のどれかを選んでください。");
             choice = Integer.parseInt(reader.readLine());
 
             switch (choice) {
-            case 1: {
+            case 1:
                 str = "オレンジジュースです。";
                 break;
-            }
-            case 2: {
+            case 2:
                 str = "コーヒーです。";
                 break;
-            }
-            case 3: {
+            case 3:
                 str = "ミルクです。";
                 break;
-            }
-            default: {
+            default:
                 str = "どれでもありません。";
                 break;
-            }
             }
             System.out.println(str);
         } catch (IOException e) {
