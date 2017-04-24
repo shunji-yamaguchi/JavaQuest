@@ -19,7 +19,7 @@ public class Q5_7 {
         try {
             String today;
             System.out.println("0-6の数字を入力してください。対応した曜日を表示します。");
-            
+
             switch (Integer.parseInt(reader.readLine())) {
             case 0: {
                 today = "日曜日";
@@ -54,9 +54,9 @@ public class Q5_7 {
                 break;
             }
             }
-            
+
             System.out.println(today);
-            
+
         } catch (IOException e) {
             System.out.println(e);
         } catch (NumberFormatException e) {
