@@ -18,37 +18,37 @@ public class Q5_7 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            String number;
+            String day_of_the_week;
             System.out.println("0-6の数字を入力してください。対応した曜日を表示します。");
 
             switch (Integer.parseInt(reader.readLine())) {
             case 0:
-                number = "日曜日";
+                day_of_the_week = "日曜日";
                 break;
             case 1:
-                number = "月曜日";
+                day_of_the_week = "月曜日";
                 break;
             case 2:
-                number = "火曜日";
+                day_of_the_week = "火曜日";
                 break;
             case 3:
-                number = "水曜日";
+                day_of_the_week = "水曜日";
                 break;
             case 4:
-                number = "木曜日";
+                day_of_the_week = "木曜日";
                 break;
             case 5:
-                number = "金曜日";
+                day_of_the_week = "金曜日";
                 break;
             case 6:
-                number = "土曜日";
+                day_of_the_week = "土曜日";
                 break;
             default:
-                number = "0-6の範囲で入力してください";
+                day_of_the_week = "0-6の範囲で入力してください";
                 break;
             }
 
-            System.out.println(number);
+            System.out.println(day_of_the_week);
 
         } catch (IOException e) {
             System.out.println(e);
