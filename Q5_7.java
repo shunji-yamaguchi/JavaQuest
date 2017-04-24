@@ -1,9 +1,10 @@
+
 /**
  * はじめに、「0-6の数字を入力してください。対応した曜日を表示します。」
  * と表示し、キーボードから0-6の数字を入力すると、
  * その数字に応じて「日曜日」「月曜日」・・・「土曜日」
  * と表示して終了するプログラムを作ってください。
- * 0-6意外の数字の入力があった場合には、「0-6の範囲で入力してください」t
+ * 0-6以外の数字の入力があった場合には、「0-6の範囲で入力してください」
  * と表示して終了するとします、また、数字以外の入力があった場合には
  * 「数字を入力してください」
  * と表示して終了するとします。
@@ -17,45 +18,37 @@ public class Q5_7 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            String today;
+            String number;
             System.out.println("0-6の数字を入力してください。対応した曜日を表示します。");
 
             switch (Integer.parseInt(reader.readLine())) {
-            case 0: {
-                today = "日曜日";
+            case 0:
+                number = "日曜日";
                 break;
-            }
-            case 1: {
-                today = "月曜日";
+            case 1:
+                number = "月曜日";
                 break;
-            }
-            case 2: {
-                today = "火曜日";
+            case 2:
+                number = "火曜日";
                 break;
-            }
-            case 3: {
-                today = "水曜日";
+            case 3:
+                number = "水曜日";
                 break;
-            }
-            case 4: {
-                today = "木曜日";
+            case 4:
+                number = "木曜日";
                 break;
-            }
-            case 5: {
-                today = "金曜日";
+            case 5:
+                number = "金曜日";
                 break;
-            }
-            case 6: {
-                today = "土曜日";
+            case 6:
+                number = "土曜日";
                 break;
-            }
-            default: {
-                today = "0-6の範囲で入力してください";
+            default:
+                number = "0-6の範囲で入力してください";
                 break;
-            }
             }
 
-            System.out.println(today);
+            System.out.println(number);
 
         } catch (IOException e) {
             System.out.println(e);
