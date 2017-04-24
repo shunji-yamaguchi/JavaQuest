@@ -37,7 +37,7 @@ public class Q5_6 {
                 break;
             }
             }
-            
+
             System.out.println(str);
         } catch (IOException e) {
             System.out.println(e);
