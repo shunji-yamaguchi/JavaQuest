@@ -27,14 +27,11 @@ public class Q5_5 {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String choice = "0";
             String str;
-            String line_separator = System.lineSeparator();
-
-            System.out.println(
-                    "好きな飲み物はなんですか？" + line_separator
-                            + "1,a オレンジジュース" + line_separator
-                            + "2,b コーヒー" + line_separator
-                            + "3,c どれでもない" + line_separator
-                            + "1(a),2(b),3(c)のどれかを選んでください");
+            System.out.println("好きな飲み物はなんですか？");
+            System.out.println("1,a オレンジジュース");
+            System.out.println("2,b コーヒー");
+            System.out.println("3,c どれでもない");
+            System.out.println("1(a),2(b),3(c)のどれかを選んでください");
             choice = reader.readLine();
 
             if (choice.equals("1") || choice.equals("a")) {
