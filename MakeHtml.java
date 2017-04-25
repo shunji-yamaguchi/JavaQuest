@@ -74,16 +74,19 @@ public class MakeHtml {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                String head = line.substring(0, 1);
+                String head;
+                if (line.length() == 0) {
+                    break;
+                } else {
+                    head = line.substring(0, 1);
+                }
 
                 switch (head) {
                 case "■":
-                    line = line.replace("■", "");
-                    System.out.println("<h1>" + line + "</h1>");
+                    System.out.println("<h1>" + line.substring(1, (line.length())) + "</h1>");
                     break;
                 case "●":
-                    line = line.replace("●", "");
-                    System.out.println("<h2>" + line + "</h2>");
+                    System.out.println("<h2>" + line.substring(1, (line.length())) + "</h2>");
                     break;
 
                 default:
