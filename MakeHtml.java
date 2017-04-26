@@ -65,7 +65,7 @@ public class MakeHtml {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         try {
-            System.out.println("<!DOCTPYE html>");
+            System.out.println("<!DOCTYPE html>");
             System.out.println("<html>");
             System.out.println("<head>");
             System.out.println("<title>My Page</title>");
