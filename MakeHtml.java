@@ -75,7 +75,7 @@ public class MakeHtml {
             String line;
             while ((line = reader.readLine()) != null) {
                 line = line + " ";
-                switch (line.substring(0,1)) {
+                switch (line.substring(0, 1)) {
                 case "■":
                     System.out.println(
                             "<h1>" + line.substring(1, (line.length() - 1)) + "</h1>");
@@ -84,7 +84,7 @@ public class MakeHtml {
                     System.out.println("<h2>" + line.substring(1, (line.length() - 1)) + "</h2>");
                     break;
                 default:
-                    System.out.println("<p>" + line.substring(0,line.length() - 1) + "</p>");
+                    System.out.println("<p>" + line.substring(0, line.length() - 1) + "</p>");
                     break;
                 }
             }
