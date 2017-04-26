@@ -6,7 +6,7 @@
  *
  *・ルール1（開始）：
  *最初に一度だけ、以下の6行を出力する。
- *    <!DECTYPE html>
+ *    <!DOCTYPE html>
  *    <html>
  *    <head>
  *    <title>My Page</title>
@@ -65,7 +65,7 @@ public class MakeHtml {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         try {
-            System.out.println("<!DECTPYE html>");
+            System.out.println("<!DOCTPYE html>");
             System.out.println("<html>");
             System.out.println("<head>");
             System.out.println("<title>My Page</title>");
@@ -76,19 +76,20 @@ public class MakeHtml {
             while ((line = reader.readLine()) != null) {
                 String head;
                 if (line.length() == 0) {
-                    break;
+                    System.out.println("<p></p>");
+                    continue;
                 } else {
                     head = line.substring(0, 1);
                 }
 
                 switch (head) {
                 case "■":
-                    System.out.println("<h1>" + line.substring(1, (line.length())) + "</h1>");
+                    System.out.println(
+                            "<h1>" + line.substring(1, (line.length())) + "</h1>");
                     break;
                 case "●":
                     System.out.println("<h2>" + line.substring(1, (line.length())) + "</h2>");
                     break;
-
                 default:
                     System.out.println("<p>" + line + "</p>");
                     break;
