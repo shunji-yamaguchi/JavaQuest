@@ -59,11 +59,12 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 public class MakeHtml {
     public static void main(String[] args) {
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, "UTF-8"));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, StandardCharsets.UTF_8));
 
             System.out.println("<!DOCTYPE html>");
             System.out.println("<html>");
