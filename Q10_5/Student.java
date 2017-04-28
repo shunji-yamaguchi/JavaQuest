@@ -48,9 +48,9 @@ public class Student {
 
     @Override
     public String toString() {
-        StringBuilder s = new StringBuilder("[" + name);
+        StringBuilder s = new StringBuilder("[").append(name);
         for (int i = 0; i < tens.length; i++) {
-            s.append(", " + Integer.toString(this.tens[i]));
+            s.append(", ").append(tens[i]);
         }
         s.append("]");
         return s.toString();
