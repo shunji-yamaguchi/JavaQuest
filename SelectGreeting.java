@@ -53,7 +53,7 @@ public class SelectGreeting {
 
         if (args.length != 1) {
             System.out.println("使い方:java SelectGreeting 番号");
-            System.exit(0);
+            System.exit(1);
         }
         int num = Integer.parseInt(args[0]);
         if (0 <= num && num < message.length) {
