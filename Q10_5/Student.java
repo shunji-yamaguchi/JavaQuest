@@ -48,12 +48,12 @@ public class Student {
 
     @Override
     public String toString() {
-        String s = "[" + name;
+        StringBuilder s = new StringBuilder("[" + name);
         for (int i = 0; i < tens.length; i++) {
-            s += ", " + Integer.toString(this.tens[i]);
+            s.append(", " + Integer.toString(this.tens[i]));
         }
-        s += "]";
-        return s;
+        s.append("]");
+        return s.toString();
     }
 
     public int total() {
