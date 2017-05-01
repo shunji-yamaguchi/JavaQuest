@@ -73,11 +73,12 @@ class Rectangle {
         int x2 = (this.x + this.width) < (r.x + r.width) ? (this.x + this.width) : (r.x + r.width);
         //返す矩形の右下のy座標
         int y2 = (this.y + this.height) < (r.y + r.height) ? (this.y + this.height) : (r.y + r.height);
-        Rectangle rect = new Rectangle();
 
-        if ((x2 - x1) > 0 && (y2 - y1) > 0) {
-            rect.setLocation(x1, y1);
-            rect.setSize((x2 - x1), (y2 - y1));
+
+        if (x2 > x1 && y2 > y1) {
+            int w = x2 - x1;
+            int h = y2 - y1;
+            Rectangle rect = new Rectangle(w, h, x1, y1);
             return rect;
         }
         return null;
