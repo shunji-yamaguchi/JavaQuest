@@ -11,11 +11,10 @@ package Q11_4;
  * 6:        this.y = y;
  * 7:    }
  * 8:}
- * 1行目、クラス宣言時に他のクラスから参照できるようpublicで宣言していないので、クラス宣言時にpublicを付けます。
  * 5行目、メソッドにstatic修飾子があり、メソッドの外で宣言したフィールドxとyを使えないのでstaticを使いません。
  */
 
-public class Point {
+class Point {
     int x;
     int y;
 
