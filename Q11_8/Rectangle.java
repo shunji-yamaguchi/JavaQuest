@@ -51,8 +51,6 @@ public class Rectangle {
     }
 
     Rectangle(int w, int h) {
-        w = w > 0 ? w : 0;
-        h = h > 0 ? h : 0;
         setSize(w, h);
     }
 
@@ -68,11 +66,11 @@ public class Rectangle {
     }
 
     public static void main(String[] args) {
-        InputRect r1 = new InputRect();
+        Rectangle r1 = new Rectangle();
         System.out.println("r1.width = " + r1.width);
         System.out.println("r1.height = " + r1.height);
         System.out.println("r1.getArea = " + r1.getArea());
-        InputRect r2 = new InputRect(-123, -45);
+        Rectangle r2 = new Rectangle(-123, -45);
         System.out.println("r2.width = " + r2.width);
         System.out.println("r2.height = " + r2.height);
         System.out.println("r2.getArea = " + r2.getArea());
