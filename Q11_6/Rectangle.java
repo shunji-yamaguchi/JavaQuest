@@ -35,7 +35,7 @@ class Rectangle {
     //2つのRectangleを比較して、等しかったらtrue,
     //等しくなかったらfalseを返す
     boolean areSame(Rectangle rect) {
-        if (this == null || rect == null) {
+        if (rect == null) {
             return false;
         } else if (this.width == rect.width && this.height == rect.height) {
             return true;
