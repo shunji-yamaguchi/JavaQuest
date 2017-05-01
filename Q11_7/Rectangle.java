@@ -21,7 +21,7 @@ public class Rectangle {
     }
 
     public static void main(String[] args) {
-        OutputRect rect = new OutputRect();
+        Rectangle rect = new Rectangle();
         System.out.println(rect);
     }
 }
