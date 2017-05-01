@@ -74,14 +74,13 @@ class Rectangle {
         //返す矩形の右下のy座標
         int y2 = (this.y + this.height) < (r.y + r.height) ? (this.y + this.height) : (r.y + r.height);
 
-
-        if (x2 > x1 && y2 > y1) {
-            int w = x2 - x1;
-            int h = y2 - y1;
-            Rectangle rect = new Rectangle(w, h, x1, y1);
-            return rect;
+        if (x2 <= x1 || y2 <= y1) {
+            return null;
         }
-        return null;
+        int w = x2 - x1;
+        int h = y2 - y1;
+        Rectangle rect = new Rectangle(w, h, x1, y1);
+        return rect;
     }
 
     public static void main(String[] args) {
