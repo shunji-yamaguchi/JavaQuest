@@ -55,10 +55,8 @@ public class Rectangle {
     }
 
     public void setSize(int w, int h) {
-        w = w > 0 ? w : 0;
-        h = h > 0 ? h : 0;
-        width = w;
-        height = h;
+        width = w > 0 ? w : 0;
+        height = h > 0 ? h : 0;
     }
 
     public int getArea() {
