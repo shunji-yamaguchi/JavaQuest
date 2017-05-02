@@ -42,7 +42,7 @@ class Rectangle {
         this.y = 0;
     }
 
-    Rectangle(int w, int h, int x, int y) {
+    Rectangle(int x, int y, int w, int h) {
         this.width = w;
         this.height = h;
         this.x = x;
@@ -79,13 +79,13 @@ class Rectangle {
         }
         int w = x2 - x1;
         int h = y2 - y1;
-        Rectangle rect = new Rectangle(w, h, x1, y1);
+        Rectangle rect = new Rectangle(x1, y1, w, h);
         return rect;
     }
 
     public static void main(String[] args) {
-        Rectangle rect1 = new Rectangle(20, 20, 0, 0);
-        Rectangle rect2 = new Rectangle(15, 15, 15, 15);
+        Rectangle rect1 = new Rectangle(0, 0, 20, 20);
+        Rectangle rect2 = new Rectangle(5, 15, 10, 10);
         Rectangle rect3 = new Rectangle();
         rect3 = rect1.intersect(rect2);
 
