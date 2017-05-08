@@ -1,6 +1,7 @@
 package Q12_4;
+
 class Rectangle {
-     int width;
+    int width;
     int height;
 
     Rectangle() {
