@@ -31,19 +31,12 @@ package Q13_3;
 public class Q13_3 {
     public static void main(String[] args) {
         try {
-            System.out.println("method1の実行");
             method1(0);
-            System.out.println("method1の終了");
-
-            System.out.println("method2の実行");
             method2(0);
-            System.out.println("method2の終了");
-
-            System.out.println("method3の実行");
             method3(0);
-            System.out.println("method3の終了");
         } catch (Exception e) {
             System.out.println("例外:" + e);
+            e.printStackTrace();
         }
     }
 
