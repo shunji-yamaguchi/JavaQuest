@@ -25,8 +25,8 @@ class Rectangle {
     public int x;
     public int y;
 
-    static int INITIAL_WIDTH = 10;
-    static int INITIAL_HEIGHT = 10;
+    static final int INITIAL_WIDTH = 10;
+    static final int INITIAL_HEIGHT = 10;
 
     Rectangle() {
         this.width = INITIAL_WIDTH;
