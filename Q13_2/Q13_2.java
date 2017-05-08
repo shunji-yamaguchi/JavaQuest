@@ -2,7 +2,7 @@ package Q13_2;
 
 /**
  * List13-3の例外処理をmainメソッドからmyAssignメソッドに移してください。
- * すなわち、mainメソッドにはmyassignメソッドの呼び出しだけを置き、
+ * すなわち、mainメソッドにはmyAssignメソッドの呼び出しだけを置き、
  * tyr文はmyAssignメソッド中におさめてください。
  * List13-3
  *public classExceptionTest3{
