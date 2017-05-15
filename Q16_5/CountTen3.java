@@ -37,6 +37,10 @@ public class CountTen3 extends Thread {
         CountTen3 ct2 = new CountTen3();
         CountTen3 ct3 = new CountTen3();
 
+        ct1.setName("Thread1");
+        ct2.setName("Thread2");
+        ct3.setName("Thread3");
+
         ct1.start();
         ct2.start();
         ct3.start();
