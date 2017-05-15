@@ -7,33 +7,27 @@ package Q16_7;
 public class Q16_7 {
     public static void main(String[] args) {
 
-        Runnable p3 = new Runnable() {
-            @Override
-            public void run() {
-                String str = "***";
-                try {
-                    for (int i = 0; i < 10; i++) {
-                        Thread.sleep(3000);
-                        System.out.println(str);
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        Runnable p3 = () -> {
+            String str = "***";
+            try {
+                for (int i = 0; i < 10; i++) {
+                    Thread.sleep(3000);
+                    System.out.println(str);
                 }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         };
 
-        Runnable p5 = new Runnable() {
-            @Override
-            public void run() {
-                String str = "=====";
-                try {
-                    for (int i = 0; i < 10; i++) {
-                        Thread.sleep(5000);
-                        System.out.println(str);
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        Runnable p5 = () -> {
+            String str = "=====";
+            try {
+                for (int i = 0; i < 10; i++) {
+                    Thread.sleep(5000);
+                    System.out.println(str);
                 }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         };
 
