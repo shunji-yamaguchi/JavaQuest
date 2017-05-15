@@ -44,7 +44,7 @@ public class CountTen3 extends Thread {
         for (int i = 0; i < 10; i++) {
             System.out.println(Thread.currentThread() + ":i" + i);
         }
-        
+
         try {
             ct1.join();
             ct2.join();
