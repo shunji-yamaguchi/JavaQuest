@@ -1,4 +1,5 @@
 package Q18_3;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -75,6 +76,7 @@ import java.io.PrintWriter;
 
 public class Prime1 {
     static final int MAX_PRIME = 1000;
+
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("使用方法：java Prime1 作成ファイル");
@@ -98,7 +100,7 @@ public class Prime1 {
         }
         prime[0] = false;
         prime[1] = false;
-        
+
         for (int n = 0; n < MAX_PRIME; n++) {
             if (prime[n]) {
                 //ここでnを出力する
@@ -107,9 +109,9 @@ public class Prime1 {
                 }
             }
         }
-        
+
         for (int n = 0; n < MAX_PRIME; n++) {
-            if(prime[n]) {
+            if (prime[n]) {
                 writer.println(n);
             }
         }
