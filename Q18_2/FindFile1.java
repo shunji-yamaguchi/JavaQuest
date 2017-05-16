@@ -69,13 +69,12 @@ public class FindFile1 {
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
-   
+
             for (String line = reader.readLine(); line != null; line = reader.readLine()) {
                 if (line.indexOf(findString) != -1) {
                     System.out.println(line);
                 }
             }
-            
             reader.close();
         } catch (FileNotFoundException e) {
             System.out.println(fileName + "が見つかりません。");
