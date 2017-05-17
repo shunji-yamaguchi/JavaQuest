@@ -81,7 +81,7 @@ public class MyStringArrayListTest {
         testList.get(3);
     }
 
-    @Test
+    @Test(expected = OutOfMemoryError.class)
     public void メモリを使い切ってみる() {
         while (true) {
             testList.add("0");
