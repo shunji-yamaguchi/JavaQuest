@@ -1,7 +1,7 @@
 package Q19_3;
 
 /**
- * 「ArrauListの内部はどうなっているか」(p.269)を参考にして、
+ * 「ArrayListの内部はどうなっているか」(p.269)を参考にして、
  * 以下のようなクラスMyStringArrayListを作ってください。
  * ただし、練習のため、java.utilパッケージは使わないようにしてください。
  *     ・コンストラクタの中でINITIAL_CAPACITY個の要素を持つStringの配列を、
@@ -43,13 +43,17 @@ public class MyStringArrayList {
         arrayCount = 0;
     }
 
-    public void add(String s) {
-        if (!(arrayCount < arraySize)) {
+    public void add(String s) throws OutOfMemoryError {
+        if (arrayCount >= arraySize) {
             //配列の増設の処理
-            String[] arTemp = ar;
-            ar = new String[arraySize * 2];
-            System.arraycopy(arTemp, 0, ar, 0, arrayCount);
-            arraySize *= 2;
+            try {
+                String[] arTemp = ar;
+                ar = new String[arraySize * 2];
+                System.arraycopy(arTemp, 0, ar, 0, arrayCount);
+                arraySize *= 2;
+            } catch (OutOfMemoryError e) {
+                e.printStackTrace();
+            }
         }
         ar[arrayCount] = s;
         arrayCount++;
