@@ -43,7 +43,7 @@ public class MyStringArrayList {
         arrayCount = 0;
     }
 
-    public void add(String s) throws OutOfMemoryError {
+    public void add(String s) {
         if (arrayCount >= arraySize) {
             //配列の増設の処理
             String[] arTemp = ar;

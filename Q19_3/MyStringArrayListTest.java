@@ -27,12 +27,12 @@ public class MyStringArrayListTest {
     }
 
     @Test
-    public void コンストラクタの動作を確認する() {
+    public void コンストラクタの動作させてNullでないことを確認する() {
         assertNotNull(testList);
     }
 
     @Test
-    public void 入出力テストをする() {
+    public void addで入力した値とgetで得る値が同じか確認する() {
         for (int i = 0; i < 10; i++) {
             testList.add(Integer.toString(i));
         }
@@ -79,19 +79,5 @@ public class MyStringArrayListTest {
         testList.add("test1");
         testList.add("test2");
         testList.get(3);
-    }
-
-    //@Test(expected = IndexOutOfBoundsException.class)
-    @Test(expected = OutOfMemoryError.class)
-    public void メモリを使い切ってみる() {
-        while (true) {
-            for (int i = 0; i < 100; i++) {
-                testList.add("0");
-                testList.add("0");
-                testList.add("0");
-                testList.add("0");
-                testList.add("0");
-            }
-        }
     }
 }
