@@ -46,21 +46,17 @@ public class MyStringArrayList {
     public void add(String s) throws OutOfMemoryError {
         if (arrayCount >= arraySize) {
             //配列の増設の処理
-            try {
-                String[] arTemp = ar;
-                ar = new String[arraySize * 2];
-                System.arraycopy(arTemp, 0, ar, 0, arrayCount);
-                arraySize *= 2;
-            } catch (OutOfMemoryError e) {
-                e.printStackTrace();
-            }
+            String[] arTemp = ar;
+            ar = new String[arraySize * 2];
+            System.arraycopy(arTemp, 0, ar, 0, arrayCount);
+            arraySize *= 2;
         }
         ar[arrayCount] = s;
         arrayCount++;
     }
 
     public String get(int n) throws IndexOutOfBoundsException {
-        if (n < 0 || n > arrayCount) {
+        if (n < 0 || n >= arrayCount) {
             throw new IndexOutOfBoundsException();
         }
         return ar[n];

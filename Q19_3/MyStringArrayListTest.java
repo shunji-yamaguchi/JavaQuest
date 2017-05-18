@@ -22,7 +22,7 @@ public class MyStringArrayListTest {
     }
 
     @After
-    public void teardown() throws NullPointerException {
+    public void teardown() {
         testList = null;
     }
 
@@ -63,7 +63,7 @@ public class MyStringArrayListTest {
         assertThat(output.toString(), is("10"));
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void 中身を入れずにgetしてみる() {
         testList.get(0);
     }
@@ -81,10 +81,17 @@ public class MyStringArrayListTest {
         testList.get(3);
     }
 
+    //@Test(expected = IndexOutOfBoundsException.class)
     @Test(expected = OutOfMemoryError.class)
     public void メモリを使い切ってみる() {
         while (true) {
-            testList.add("0");
+            for (int i = 0; i < 100; i++) {
+                testList.add("0");
+                testList.add("0");
+                testList.add("0");
+                testList.add("0");
+                testList.add("0");
+            }
         }
     }
 }
