@@ -23,6 +23,6 @@ package Q17_5;
 
 import yourtool.*;
 
-public class PasswordRegister {
+public class PasswordChecker {
 
 }
