@@ -27,54 +27,37 @@ public class MyStringArrayListTest {
     }
 
     @Test
-    public void コンストラクタの動作させてNullでないことを確認する() {
+    public void コンストラクタ動作のあとはNull以外であること() {
         assertNotNull(testList);
     }
 
     @Test
-    public void addで入力した値とgetで得る値が同じか確認する() {
-        for (int i = 0; i < 10; i++) {
-            testList.add(Integer.toString(i));
-        }
-        for (int i = 0; i < 10; i++) {
-            System.out.println(testList.get(i));
-        }
-
-        String ls = System.lineSeparator();
-        assertThat(output.toString(), is("0" + ls
-                + "1" + ls
-                + "2" + ls
-                + "3" + ls
-                + "4" + ls
-                + "5" + ls
-                + "6" + ls
-                + "7" + ls
-                + "8" + ls
-                + "9" + ls));
+    public void addで渡した値とgetで得る値は同じであること() {
+        testList.add("0");
+        assertThat(testList.get(0), is("0"));
     }
 
     @Test
-    public void サイズを確認する() {
+    public void sizeは要素の数と同じであること() {
         for (int i = 0; i < 10; i++) {
             testList.add(Integer.toString(i));
         }
         System.out.print(testList.size());
-
         assertThat(output.toString(), is("10"));
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void 中身を入れずにgetしてみる() {
+    public void getしたときに中身が無いと例外になること() {
         testList.get(0);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void getに負の値を与えてみる() {
+    public void getに負の数を渡すと例外になること() {
         testList.get(-1);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void getで中身のない要素を取ってみる() {
+    public void getで中身のない要素を得ようとすると例外になること() {
         testList.add("test0");
         testList.add("test1");
         testList.add("test2");
