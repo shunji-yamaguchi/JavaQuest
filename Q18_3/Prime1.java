@@ -104,15 +104,11 @@ public class Prime1 {
         for (int n = 0; n < MAX_PRIME; n++) {
             if (prime[n]) {
                 //ここでnを出力する
+                writer.println(n);
                 for (int i = 2; i * n < MAX_PRIME; i++) {
                     prime[i * n] = false;
-                }
-            }
-        }
 
-        for (int n = 0; n < MAX_PRIME; n++) {
-            if (prime[n]) {
-                writer.println(n);
+                }
             }
         }
     }
