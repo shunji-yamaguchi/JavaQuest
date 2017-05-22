@@ -17,31 +17,40 @@ import java.util.ArrayList;
 
 public class StringUtils {
     public static String toSnakeCase(String s) {
-        int anderCount = 0;
-        ArrayList<Integer> upperString = new ArrayList<Integer>();
+        int underCount = 0;
+        ArrayList<Integer> upperStringSuffix = new ArrayList<Integer>();
 
         //1文字目を除く大文字をカウント
         for (int i = 1; i < s.length(); i++) {
             if (Character.isUpperCase(s.charAt(i))) {
-                upperString.add(i);
-                anderCount++;
+                upperStringSuffix.add(i);
+                underCount++;
             }
         }
 
         //大文字の前に"_"を入れる
-        StringBuilder str = new StringBuilder(s.length() + anderCount);
-        int addAnderCount = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (addAnderCount < anderCount) { //大文字がまだあるかどうかの判断
-                if (upperString.get(addAnderCount) == i) { //"_"を入れるかどうかの判断
-                    str.append("_");
-                    addAnderCount++;
-                }
-            }
-            str.append(s.substring(i, i + 1));//文字を一文字ずつ追加
+        StringBuilder str = new StringBuilder(s.length() + underCount);
+        int addUnderCount = 0;
+
+        //1文字目だけ先に処理
+        if (Character.isUpperCase(s.charAt(0))) {
+            str.append(Character.toLowerCase(s.charAt(0)));
+        } else {
+            str.append(s.charAt(0));
         }
 
-        return str.toString().toLowerCase();
-
+        for (int i = 1; i < s.length(); i++) {
+            char ch;//appndするための文字を入れる
+            ch = s.charAt(i);
+            if (addUnderCount < underCount) { //大文字がまだあるかどうかの判断
+                if (upperStringSuffix.get(addUnderCount) == i) { //"_"を入れるかどうかの判断
+                    str.append("_");
+                    addUnderCount++;
+                    ch = Character.toLowerCase(s.charAt(i));
+                }
+            }
+            str.append(ch);
+        }
+        return str.toString();
     }
 }
