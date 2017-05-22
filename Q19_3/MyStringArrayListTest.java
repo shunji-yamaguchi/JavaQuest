@@ -16,8 +16,8 @@ public class MyStringArrayListTest {
     }
 
     @Test
-    public void コンストラクタ動作のあとはNull以外であること() {
-        assertNotNull(testList);
+    public void コンストラクタ動作のあとはsizeが0であること() {
+        assertThat(testList.size(), is(0));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class MyStringArrayListTest {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void getで要素のない配列を得ようとするとIndexOutOfBoundsExceptionになること() {
+    public void arrayCount以上の値を引数としてgetするとIndexOutOfBoundsExceptionになること() {
         testList.add("test0");
         testList.add("test1");
         testList.add("test2");
