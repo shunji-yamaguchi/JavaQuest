@@ -66,11 +66,8 @@ public class FindFile1 {
         }
         String findString = args[0];
         String fileName = args[1];
-        BufferedReader reader = null;
 
-        try {
-            reader = new BufferedReader(new FileReader(fileName));
-
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             for (String line = reader.readLine(); line != null; line = reader.readLine()) {
                 if (line.indexOf(findString) != -1) {
                     System.out.println(line);
@@ -80,15 +77,6 @@ public class FindFile1 {
             System.out.println(fileName + "が見つかりません。");
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
         }
     }
 }

@@ -43,13 +43,4 @@ public class FindFile1Test {
         FindFile1.main(args);
         assertThat(output.toString(), is("sample.javaが見つかりません。" + ls));
     }
-
-    @Test(expected = NullPointerException.class)
-    public void 引数にnullを入れた場合はNullPointerExceptionが返ってくる() {
-        String[] args = new String[2];
-        args[0] = null;
-        args[1] = "sample.txt";
-        FindFile1.main(args);
-    }
-
 }
