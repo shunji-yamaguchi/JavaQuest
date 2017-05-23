@@ -24,7 +24,6 @@ class Counter {
     }
 
     public int increment() {
-        counter++;
-        return counter;
+        return ++counter;
     }
 }
