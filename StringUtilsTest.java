@@ -36,7 +36,7 @@ public class StringUtilsTest {
     }
 
     @Test
-    public void toSnakeCaseに空文字を渡すと空文字が返ってくる() {
+    public void toSnakeCaseに空文字を渡すと空文字が返ってくること() {
         assertThat(StringUtils.toSnakeCase(""), is(""));
     }
 }

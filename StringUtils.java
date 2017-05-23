@@ -46,7 +46,6 @@ public class StringUtils {
                 addUnderCount++;
                 ch = Character.toLowerCase(ch);
             }
-            //}
             str.append(ch);
         }
         return str.toString();
