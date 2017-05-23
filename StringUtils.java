@@ -17,37 +17,32 @@ import java.util.ArrayList;
 
 public class StringUtils {
     public static String toSnakeCase(String s) {
-        if (s.length() < 1) {
-            return "";
-        }
-
         int underCount = 0;
         ArrayList<Integer> upperStringIndex = new ArrayList<Integer>();
 
-        //1文字目を除く大文字をカウント
-        for (int i = 1; i < s.length(); i++) {
+        //大文字をカウント
+        for (int i = 0; i < s.length(); i++) {
             if (Character.isUpperCase(s.charAt(i))) {
                 upperStringIndex.add(i);
                 underCount++;
             }
         }
 
+        if (underCount == 0) {
+            return s;
+        }
+
         //大文字の前に"_"を入れる
         StringBuilder str = new StringBuilder(s.length() + underCount);
         int addUnderCount = 0;
 
-        //1文字目だけ先に処理
-        if (Character.isUpperCase(s.charAt(0))) {
-            str.append(Character.toLowerCase(s.charAt(0)));
-        } else {
-            str.append(s.charAt(0));
-        }
-
-        for (int i = 1; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             //大文字がまだあるかどうか,"_"を入れるかどうかの判断
             if (addUnderCount < underCount && upperStringIndex.get(addUnderCount) == i) {
-                str.append("_");
+                if (i != 0) {//1文字目じゃなかった場合に`_`の追加
+                    str.append("_");
+                }
                 addUnderCount++;
                 ch = Character.toLowerCase(ch);
             }
