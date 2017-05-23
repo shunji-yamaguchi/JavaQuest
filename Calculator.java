@@ -14,14 +14,11 @@
  * 第２引数に0を指定してdivideを呼び出すと、IllegalArgumentExceptionが発生する
 */
 
-
-
 class Calculator {
     int divide(int a, int b) {
         if (b == 0) {
             throw new IllegalArgumentException();
         }
-        return a/b;
+        return a / b;
     }
 }
-
