@@ -35,4 +35,8 @@ public class StringUtilsTest {
         assertThat(StringUtils.toSnakeCase("precticeJunit"), is("prectice_junit"));
     }
 
+    @Test
+    public void toSnakeCaseに空文字を渡すと空文字が返ってくる() {
+        assertThat(StringUtils.toSnakeCase(""), is(""));
+    }
 }
