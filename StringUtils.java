@@ -17,6 +17,10 @@ import java.util.ArrayList;
 
 public class StringUtils {
     public static String toSnakeCase(String s) {
+        if (s.length() < 1) {
+            return "";
+        }
+
         int underCount = 0;
         ArrayList<Integer> upperStringIndex = new ArrayList<Integer>();
 
@@ -28,6 +32,7 @@ public class StringUtils {
             }
         }
 
+        //大文字の前に"_"を入れる
         StringBuilder str = new StringBuilder(s.length() + underCount);
         int addUnderCount = 0;
 
@@ -39,14 +44,14 @@ public class StringUtils {
         }
 
         for (int i = 1; i < s.length(); i++) {
-            char ch;//appndするための文字を入れる
-            ch = s.charAt(i);
-                //大文字がまだあるかどうか,"_"を入れるかどうかの判断
-                if (addUnderCount < underCount && upperStringIndex.get(addUnderCount) == i) {
-                    str.append("_");
-                    addUnderCount++;
-                    ch = Character.toLowerCase(ch);
-                }
+            char ch = s.charAt(i);
+            //大文字がまだあるかどうか,"_"を入れるかどうかの判断
+            if (addUnderCount < underCount && upperStringIndex.get(addUnderCount) == i) {
+                str.append("_");
+                addUnderCount++;
+                ch = Character.toLowerCase(ch);
+            }
+            //}
             str.append(ch);
         }
         return str.toString();
