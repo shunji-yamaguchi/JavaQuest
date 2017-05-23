@@ -24,7 +24,7 @@ public class CalculatorTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void devideの第2引数にゼロを渡してIllegalArgumentExceptionが返ってくること() {
+    public void devideの第2引数にゼロを渡してIllegalArgumentExceptionが送出されること() {
         calculator.divide(6, 0);
     }
 
