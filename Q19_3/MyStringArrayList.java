@@ -34,22 +34,19 @@ package Q19_3;
 public class MyStringArrayList {
     private static final int INITIAL_CAPACITY = 4;
     private String[] ar;
-    private int arraySize;
     private int arrayCount;
 
     public MyStringArrayList() {
         ar = new String[INITIAL_CAPACITY];
-        arraySize = INITIAL_CAPACITY;
         arrayCount = 0;
     }
 
     public void add(String s) {
-        if (arrayCount >= arraySize) {
+        if (arrayCount >= ar.length) {
             //配列の増設の処理
             String[] arTemp = ar;
-            ar = new String[arraySize * 2];
+            ar = new String[ar.length * 2];
             System.arraycopy(arTemp, 0, ar, 0, arrayCount);
-            arraySize *= 2;
         }
         ar[arrayCount] = s;
         arrayCount++;
