@@ -2,15 +2,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class NumberUtilTest {
+public class NumberUtilsTest {
 
     @Test
     public void isEvenに10を渡すとtrueを返す() {
-        assertTrue(NumberUtil.isEven(10));
+        assertTrue(NumberUtils.isEven(10));
     }
 
     @Test
     public void isEvenに7を渡すとfalseを返す() {
-        assertFalse(NumberUtil.isEven(7));
+        assertFalse(NumberUtils.isEven(7));
     }
 }

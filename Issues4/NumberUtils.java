@@ -14,7 +14,7 @@
  * 入力値に7を与えると、falseを返す
 */
 
-class NumberUtil {
+class NumberUtils {
     public static boolean isEven(int num) {
         return num % 2 == 0;
     }
