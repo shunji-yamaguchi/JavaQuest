@@ -39,9 +39,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Enclosed.class)
 public class ItemStockTest {
-    static ItemStock itemStock;
 
     public static class 初期状態でのテスト {
+        ItemStock itemStock;
+
         @Before
         public void setup() {
             itemStock = new ItemStock();
@@ -62,6 +63,8 @@ public class ItemStockTest {
     }
 
     public static class Itemが1つ追加されている状態でのテスト {
+        ItemStock itemStock;
+
         @Before
         public void setup() {
             itemStock = new ItemStock();
