@@ -40,8 +40,8 @@ public class ItemStock {
 
     public int getNum(Item item) {
         int itemCount = 0;
-        for (Item itemIndex : itemStock) {
-            if (itemIndex.name.equals(item.name)) {
+        for (Item itemCompare : itemStock) {
+            if (itemCompare.name.equals(item.name)) {
                 itemCount++;
             }
         }
