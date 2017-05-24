@@ -41,20 +41,10 @@ public class ItemStock {
     public int getNum(Item item) {
         int itemCount = 0;
         for (Item itemIndex : itemStock) {
-            if (itemIndex.name == item.name) {
+            if (itemIndex.name.equals(item.name)) {
                 itemCount++;
             }
         }
         return itemCount;
-    }
-}
-
-class Item {
-    public final String name;
-    public final int price;
-
-    public Item(String name, int price) {
-        this.name = name;
-        this.price = price;
     }
 }
