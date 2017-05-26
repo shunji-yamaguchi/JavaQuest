@@ -17,13 +17,13 @@
 */
 
 class Counter {
-    int counter;
+    private int numCounter;
 
     public Counter() {
-        counter = 0;
+        numCounter = 0;
     }
 
     public int increment() {
-        return ++counter;
+        return ++numCounter;
     }
 }
